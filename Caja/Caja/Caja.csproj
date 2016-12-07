@@ -212,6 +212,7 @@
     <Content Include="ingresoConceptoFactura.aspx" />
     <Content Include="ingresoDepartamento.aspx" />
     <Content Include="ingresoEmpleados.aspx" />
+    <Content Include="ingresoSolicitud.aspx" />
     <Content Include="ingresoTipoCondicion.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -381,12 +382,14 @@
     <Compile Include="Clases\Beans\Concepto_Factura.cs" />
     <Compile Include="Clases\Beans\Departamento.cs" />
     <Compile Include="Clases\Beans\Empleado.cs" />
+    <Compile Include="Clases\Beans\Solicitud.cs" />
     <Compile Include="Clases\Beans\TipoCondicion.cs" />
     <Compile Include="Clases\Modelos\Conexion.cs" />
     <Compile Include="Clases\Modelos\ModeloCajaChica.cs" />
     <Compile Include="Clases\Modelos\ModeloConceptoFactura.cs" />
     <Compile Include="Clases\Modelos\ModeloDepartamento.cs" />
     <Compile Include="Clases\Modelos\ModeloEmpleado.cs" />
+    <Compile Include="Clases\Modelos\ModeloSolicitud.cs" />
     <Compile Include="Clases\Modelos\ModeloTipoCondicion.cs" />
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
@@ -432,6 +435,13 @@
     </Compile>
     <Compile Include="ingresoEmpleados.aspx.designer.cs">
       <DependentUpon>ingresoEmpleados.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ingresoSolicitud.aspx.cs">
+      <DependentUpon>ingresoSolicitud.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ingresoSolicitud.aspx.designer.cs">
+      <DependentUpon>ingresoSolicitud.aspx</DependentUpon>
     </Compile>
     <Compile Include="ingresoTipoCondicion.aspx.cs">
       <DependentUpon>ingresoTipoCondicion.aspx</DependentUpon>
