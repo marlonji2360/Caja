@@ -211,6 +211,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="ingresoConceptoFactura.aspx" />
     <Content Include="ingresoDepartamento.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -376,8 +377,10 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Clases\Beans\Concepto_Factura.cs" />
     <Compile Include="Clases\Beans\Departamento.cs" />
     <Compile Include="Clases\Modelos\Conexion.cs" />
+    <Compile Include="Clases\Modelos\ModeloConceptoFactura.cs" />
     <Compile Include="Clases\Modelos\ModeloDepartamento.cs" />
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
@@ -395,6 +398,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="ingresoConceptoFactura.aspx.cs">
+      <DependentUpon>ingresoConceptoFactura.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ingresoConceptoFactura.aspx.designer.cs">
+      <DependentUpon>ingresoConceptoFactura.aspx</DependentUpon>
     </Compile>
     <Compile Include="ingresoDepartamento.aspx.cs">
       <DependentUpon>ingresoDepartamento.aspx</DependentUpon>
