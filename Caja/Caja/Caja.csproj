@@ -207,10 +207,8 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Account\Web.config" />
-    <Content Include="ApplicationInsights.config">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="ingresoCajaChica.aspx" />
     <Content Include="ingresoConceptoFactura.aspx" />
     <Content Include="ingresoDepartamento.aspx" />
     <Content Include="ingresoEmpleados.aspx" />
@@ -379,11 +377,13 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Clases\Beans\CajaChica.cs" />
     <Compile Include="Clases\Beans\Concepto_Factura.cs" />
     <Compile Include="Clases\Beans\Departamento.cs" />
     <Compile Include="Clases\Beans\Empleado.cs" />
     <Compile Include="Clases\Beans\TipoCondicion.cs" />
     <Compile Include="Clases\Modelos\Conexion.cs" />
+    <Compile Include="Clases\Modelos\ModeloCajaChica.cs" />
     <Compile Include="Clases\Modelos\ModeloConceptoFactura.cs" />
     <Compile Include="Clases\Modelos\ModeloDepartamento.cs" />
     <Compile Include="Clases\Modelos\ModeloEmpleado.cs" />
@@ -404,6 +404,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="ingresoCajaChica.aspx.cs">
+      <DependentUpon>ingresoCajaChica.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ingresoCajaChica.aspx.designer.cs">
+      <DependentUpon>ingresoCajaChica.aspx</DependentUpon>
     </Compile>
     <Compile Include="ingresoConceptoFactura.aspx.cs">
       <DependentUpon>ingresoConceptoFactura.aspx</DependentUpon>
