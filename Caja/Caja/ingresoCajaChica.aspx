@@ -3,7 +3,7 @@
 
     <br>
     <div class="panel panel-default">
-        <div class="panel-heading"><font color="grey"><label class="bold">Ingreso de Tipo de Condicion</label></font></div>
+        <div class="panel-heading"><font color="grey"><label class="bold">Creacion de Caja Chica</label></font></div>
         <div class="panel-body">
             <div class="col-md-6"> 
 

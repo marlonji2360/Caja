@@ -22,6 +22,8 @@ namespace Caja.Clases.Modelos
             ejecutar(insert);
         }
 
+       
+
         private void ejecutar(string consultaSQL)
         {
             c.con.Open();

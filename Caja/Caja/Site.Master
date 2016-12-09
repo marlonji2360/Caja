@@ -50,26 +50,33 @@
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><a runat="server" href="~/">Home</a></li>
-                        <li><a runat="server" href="~/About">About</a></li>
-                        <li><a runat="server" href="~/Contact">Contact</a></li>
+                        <li class="dropdown">
+                            <a runat="server" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button" href="#">Nuevos Registros</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/ingresoCajaChica.aspx">Nueva Caja Chica</a></li>
+                                <li><a href="/ingresoEmpleados.aspx">Nuevo Empleado</a></li>
+                            </ul>
+
+                        </li>
+                        <li class="dropdown">
+                            <a runat="server" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button" href="#">Mantenimientos</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/ingresoConceptoFactura.aspx">Concepto de Factura</a></li>
+                                <li><a href="/ingresoDepartamento.aspx">Departamentos</a></li>
+                                <li><a href="/ingresoTipoCondicion.aspx">Condiciones</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a runat="server" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button" href="#">Solicitudes</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/ingresoSolicitud.aspx">Solicitud de efectivo</a></li>
+                                <li><a href="/ingresoFacturas.aspx">Liquidacion de Solicitudes</a></li>
+                            </ul>
+                        </li>
+                        <li><a runat="server" href="~/Contact">Reportes</a></li>
+                        <li><a runat="server" href="/Login.aspx">Salir</a></li>
                     </ul>
-                    <asp:LoginView runat="server" ViewStateMode="Disabled">
-                        <AnonymousTemplate>
-                            <ul class="nav navbar-nav navbar-right">
-                                <li><a runat="server" href="~/Account/Register">Register</a></li>
-                                <li><a runat="server" href="~/Account/Login">Log in</a></li>
-                            </ul>
-                        </AnonymousTemplate>
-                        <LoggedInTemplate>
-                            <ul class="nav navbar-nav navbar-right">
-                                <li><a runat="server" href="~/Account/Manage" title="Manage your account">Hello, <%: Context.User.Identity.GetUserName()  %> !</a></li>
-                                <li>
-                                    <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />
-                                </li>
-                            </ul>
-                        </LoggedInTemplate>
-                    </asp:LoginView>
+                   
                 </div>
             </div>
         </div>

@@ -17,11 +17,8 @@
                     <div class="form-group">
                         <label for="inputEmail" class="col-lg-5 control-label">No. Solicitud</label>
                         <div class="col-lg-5">
-                            <asp:DropDownList ID="DropSolicitud" CssClass="form-control" runat="server" DataSourceID="SqlDataSource2" DataTextField="empleados_id_empleado" DataValueField="id_solicitud" EnableViewState="False"></asp:DropDownList>
-                            <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:CajaConnectionString %>" SelectCommand="SELECT [id_solicitud], [empleados_id_empleado] FROM [Solicitud] WHERE ([caja_id_caja] = @caja_id_caja)">
-                                <SelectParameters>
-                                    <asp:ControlParameter ControlID="DropCaja" Name="caja_id_caja" PropertyName="SelectedValue" Type="Decimal" />
-                                </SelectParameters>
+                            <asp:DropDownList ID="DropSolicitud" CssClass="form-control" runat="server" DataSourceID="SqlDataSource2" DataTextField="id_solicitud" DataValueField="id_solicitud" EnableViewState="False"></asp:DropDownList>
+                            <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:CajaConnectionString %>" SelectCommand="SELECT [id_solicitud] FROM [Solicitud]">
                             </asp:SqlDataSource>
                         </div>
                     </div>
@@ -46,14 +43,16 @@
                     <div class="form-group">
                         <label for="inputEmail" class="col-lg-5 control-label">Concepto</label>
                         <div class="col-lg-5">
-                            <asp:DropDownList ID="DropConcepto" CssClass="form-control" runat="server" DataSourceID="SqlDataSource4" DataTextField="tipoconcepto" DataValueField="id_conceptofac"></asp:DropDownList>
+                            <asp:DropDownList ID="DropConcepto" AppendDataBoundItems="true" CssClass="form-control" runat="server" DataSourceID="SqlDataSource4" DataTextField="tipoconcepto" DataValueField="id_conceptofac" OnSelectedIndexChanged="DropConcepto_SelectedIndexChanged" AutoPostBack="True">
+                                <asp:ListItem Text="Seleccionar" Value="" />
+                            </asp:DropDownList>
                             <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:CajaConnectionString %>" SelectCommand="SELECT * FROM [Concepto_Factura]"></asp:SqlDataSource>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="inputEmail" class="col-lg-5 control-label">Descripcion</label>
                         <div class="col-lg-5">
-                            <asp:TextBox ID="TxtDescripcion" CssClass="form-control" runat="server" TextMode="MultiLine" Rows="5" />
+                            <asp:TextBox ID="TxtDescripcion" CssClass="form-control" runat="server" TextMode="MultiLine" Rows="5" Visible="False" />
                         </div>
                     </div>
                     <div class="form-group col-md-5">
